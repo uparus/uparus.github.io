@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-column">
+            <header class="topic-header">
+                <h1>Принципы ООП</h1>
+            </header>
+            
+            <main class="main-text-box">
+                <ul>
+                    <li><b>Абстрагирование</b> — выделение существенных характеристик объекта, игнорирование несущественных.</li>
+                    <li><b>Инкапсуляция</b> — сокрытие внутреннего состояния и предоставление интерфейса через public/private.</li>
+                    <li><b>Наследование</b> — создание нового класса на основе существующего, переиспользование кода.</li>
+                    <li><b>Полиморфизм</b> — единый интерфейс для разных типов (виртуальные функции).</li>
+                </ul>
+                <ol>
+                    <li><strong>Инкапсуляция</strong> в C++Доступ к членам класса ограничивается спецификаторами: private (только внутри класса), protected (внутри и в наследниках), public (везде). Данные обычно делают private, а доступ через public методы (геттеры/сеттеры).</li>
+                    <li><strong>Наследование</strong> в C++Синтаксис: class Derived : public Base { };. Типы наследования: public (сохраняет уровни доступа), protected (сводит public к protected), private (сводит всё к private). Конструктор производного класса вызывает конструктор базового.</li>
+                    <li><strong>Полиморфизм</strong> в C++Реализуется через виртуальные функции (virtual). Базовый указатель может вызывать переопределённые методы производного класса. Чисто виртуальная функция: virtual void f() = 0; делает класс абстрактным.</li>
+                </ol>
+
+            </main>
+        </div>
+
+        <div class="sidebar">
+            <div>
+                <ol>
+                    <li><a href="index.html">Структуры.</a></li>
+                    <li><a href="OOP.html">Принципы ООП.</a></li>
+                    <li><a href="rules.html">Правила описания классов и структур на C++. Сходства и различия.</a></li>
+                    <li><a href="Constructor.html">Конструктор и деструктор класса в C++. Перегрузка конструктора.</a></li>
+                    <li><a href="copy_constructor.html">Конструктор копирования, оператор присваивания в C++.</a></li>
+                    <li><a href="method.html">Метод (функция-член класса). Перегрузка метода.</a></li>
+                    <li><a href="constants.html">Константные и статические члены класса в C++.</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <button id="backToTop" class="scroll-up" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h16l-8-8z" fill="currentColor"/>
+        </svg>
+    </button>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

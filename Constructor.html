@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-column">
+            <header class="topic-header">
+                <h1>Конструктор и деструктор. Перегрузка конструктора</h1>
+            </header>
+            
+            <main class="main-text-box">
+                <ul>
+                    <li><b>Конструктор </b> — вызывается при создании объекта. Имя совпадает с именем класса. Может быть перегружен (разные наборы параметров).</li>
+                    <li><b>Деструктор </b> — ~ClassName(), вызывается при уничтожении объекта, освобождает ресурсы. Не перегружается.</li>
+                    <li>Если конструктор не определён, компилятор создаёт конструктор по умолчанию (без параметров).</li>
+                </ul>
+            </main>
+        </div>
+
+        <div class="sidebar">
+            <div>
+                <ol>
+                    <li><a href="index.html">Структуры.</a></li>
+                    <li><a href="OOP.html">Принципы ООП.</a></li>
+                    <li><a href="rules.html">Правила описания классов и структур на C++. Сходства и различия.</a></li>
+                    <li><a href="Constructor.html">Конструктор и деструктор класса в C++. Перегрузка конструктора.</a></li>
+                    <li><a href="copy_constructor.html">Конструктор копирования, оператор присваивания в C++.</a></li>
+                    <li><a href="method.html">Метод (функция-член класса). Перегрузка метода.</a></li>
+                    <li><a href="constants.html">Константные и статические члены класса в C++.</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <button id="backToTop" class="scroll-up" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h16l-8-8z" fill="currentColor"/>
+        </svg>
+    </button>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
