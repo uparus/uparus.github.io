@@ -1,5 +1,5 @@
 body {
-    background-color: #3b4664; 
+    background-color: #626987; 
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 .topic-header {
-    background-color: #d1d8e2;
+    background-color: #d0d5dd;
     border-radius: 40px;
     padding: 20px 40px;
     min-height: 100px;
@@ -29,14 +29,14 @@ body {
 }
 
 .main-text-box {
-    background-color: #d1d8e2;
+    background-color: #d0d5dd;
     border-radius: 40px;
     padding: 40px;
     /* min-height: 500px; */
 }
 
 .sidebar {
-    background-color: #d1d8e2;
+    background-color: #d0d5dd;
     border-radius: 40px;
     padding: 30px;
     width: fit-content; 
